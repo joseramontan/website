@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Ballega;
+    src: url("./assets/fonts/Ballega.otf");
+}
+
+.ballega {
+    font-family: Ballega;
+}
+
+@font-face {
+    font-family: GodshineSans;
+    src: url("./assets/fonts/GodshineSans.otf");
+}
+
+.godshinesans {
+    font-family: GodshineSans;
+}
+
+@font-face {
+    font-family: Bantayog;
+    src: url("./assets/fonts/Bantayog/Bantayog-Regular.woff2"),
+            url("./assets/fonts/Bantayog/Bantayog-Regular.woff"),
+            url("./assets/fonts/Bantayog/Bantayog-Regular.otf");
+    font-display: swap;
+}
+
+.bantayog {
+    font-family: Bantayog;
+}
+
+@font-face {
+    font-family: Barabara;
+    src: url("./assets/fonts/Bantayog/BARABARA.otf");
+}
+
+.barabara {
+    font-family: Barabara;
+}
