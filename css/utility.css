@@ -1,0 +1,8 @@
+.jose .flex,
+.jose .flex-column {
+    display: flex;
+}
+
+.jose .flex-column {
+    flex-direction: column;
+}

@@ -1,221 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US" class="jose blue">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Triple X</title>
+        <title>JRST</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="./css/font.css" />
+        <link rel="stylesheet" type="text/css" href="./css/logo.css" />
+        <link rel="stylesheet" type="text/css" href="./css/nav.css" />
+        <link rel="stylesheet" type="text/css" href="./css/utility.css" />
+        <link rel="stylesheet" type="text/css" href="./css/header.css" />
         <style>
-            .flex, .flex-column {
-                display: flex;
+            :root {
+                --white: hsla(0, 100%, 100%, 1);
+                --blue-secondary: hsla(220, 61%, 72%, 1);
+                --light-blue-secondary: hsla(220, 86%, 36%, 1);
+                --dark-blue-secondary: hsla(220, 100%, 21%, 1);
+                --red: hsla(353, 85%, 44%, 1);
+                --blue: hsla(220, 100%, 33%, 1);
             }
 
-            .flex-column {
-                flex-direction: column;
-            }
-
-            .jose.body {
-                height: 100dvh;
-                margin: 0;
-                background-color: hsla(0, 0%, 9%, 1);
-                font-family: GodshineSans;
-            }
-
-            .jose .header {
-                position: absolute;
-            }
-
-            /* title */
-            .jose .header > .title {
-                margin: 10px 0 0 24px;
-            }
-
-            .jose .header > .title > a {
-                font-size: 16pt;
-                letter-spacing: 0.5pt;
-                font-weight: 100;
-                color: hsla(0, 0%, 60%, 1);
-                text-decoration: none;
-            }
-
-            .jose .header > .title > a > .succeeding-letter {
-                display: none;
-            }
-
-            .jose .header > .title > a > .first-letter {
-                text-transform: lowercase;
-            }
-
-            .jose .header > .title:hover > a > .first-letter,
-            .jose .header > .title > a:hover > .first-letter,
-            .jose .header > .title > a:focus > .first-letter {
-                color: hsla(0, 100%, 100%, 1);
-                text-transform: uppercase;
-            }
-
-            .jose .header > .title:hover > a > .succeeding-letter,
-            .jose .header > .title > a:hover > .succeeding-letter,
-            .jose .header > .title > a:focus > .succeeding-letter {
-                display: inline;
-            }
-
-            .jose .header > .title > a:focus {
-                outline: none;
-            }
-
-
-            /* greeting */
-            .jose .main > .greeting {
-                height: 100dvh;
-                justify-content: center;
-                align-items: center;
-            }
-
-            /* message */
-            .jose .main > .greeting > .message {
-                margin: 0;
-                font-size: 64px;
-                color: hsla(0, 100%, 100%, 1);
-                position: relative;
-            }
-
-            /* expression */
-            .jose .main > .greeting > .message > .expression {
-                color: hsla(0, 0%, 35%, 1);
-            }
-
-            /* emoji */
-            @keyframes swinging-emoji {
-                0% {
-                    transform: rotate(0deg);
-                }
-                25% {
-                    transform: rotate(25deg);
-                }
-                50% {
-                    transform: rotate(-25deg);
-                }
-                70% {
-                    transform: rotate(25deg);
-                }
-                100% {
-                    transform: rotate(-365deg);
-                }
-            }
-
-            /* @keyframes duration | easing-function | delay |
-            iteration-count | direction | fill-mode | play-state | name */
-            .jose .main > .greeting > .message > .emoji {
-                font-size: 32pt;
-                position: absolute;
-                top: -25%;
-                animation: 3s infinite forwards swinging-emoji;
-            }
-
-            /* introduction */
-            .jose .main > .introduction {
-                height: 100dvh;
-                justify-content: center;
-                align-items: center;
-            }
-
-            /* introduction - message */
-            .jose .main > .introduction > .message {
-                font-size: 64pt;
-                margin: 0;
-                color: hsla(0, 0%, 35%, 1);
-            }
-
-            .jose .main > .introduction > .message > .name {
-                font-size: 70pt;
-                letter-spacing: -4pt;
-                color: hsla(0, 100%, 100%, 1);
-            }
-
-            /* philippine flag */
-            .jose .main > .introduction > .philippines {
-                width: 100%;
-            }
-
-            .jose .main > .introduction > .philippines > .flag > .philippine-flag {
-                height: 72px;
-            }
-
-            /* philippine flag stripes */
-            .jose .main > .introduction > .philippines > .flag > .stripes,
-            .jose .main > .introduction > .philippines > .flag > .stripes > * {
-                flex-grow: 1;
-            }
-
-            /* philippine flag blue stripes */
-            .jose .main > .introduction > .philippines > .flag > .stripes > .blue {
-                background-color: hsla(220, 100%, 33%, 1);
-            }
-
-            /* philippine flag red stripes */
-            .jose .main > .introduction > .philippines > .flag > .stripes > .red {
-                background-color: hsla(363, 85%, 44%, 1);
-            }
-
-            /* footer */
-            .jose .footer {
-                position: sticky;
-                bottom: 0;
-            }
-
-            .jose .footer > .reminder {
-                font-size: 11pt;
-                color: hsla(0, 0%, 60%, 1);
+            .jose {
                 margin: 0;
             }
 
-            .jose .footer > .reminder > .link,
-            .jose .footer > .reminder > .link:hover {
-                color: hsla(240, 97%, 75%, 1);
+            .jose.blue {
+                background-color: var(--blue);
+            }
+
+            .jose .body {
+                margin: 0;
+                overflow-x: hidden;
+            }
+
+            /* background text */
+            .jose .text-background > .mabuhi {
+                width: fit-content;
+                margin: 0;
+                overflow: hidden;
+                text-wrap: nowrap;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+                z-index: -1;
             }
             
-            .jose .footer > .reminder > .link:visited {
-                color: hsla(240, 97%, 65%, 1);
+            .jose .text-background > .mabuhi > .text {
+                position: relative;
+                margin-left: 6px;
             }
+
+            .jose .text-background > .mabuhi > .text > .mabu {
+                display: inline-block;
+                position: absolute;
+                font-size: 9.3pt;
+                transform: rotate(-90deg);
+                left: -15px;
+                bottom: 13px;
+            }
+
+            .jose .text-background > .mabuhi > .text > .hi {
+                font-size: 40pt;
+                line-height: 34pt;
+                padding-left: 11px;
+            }
+
+            /* .jose .text-background > .mabuhi > .text > .hi.ballega {
+                line-height: 28pt;
+            } */
+
+            .jose.blue .text-background .mabuhi {
+                color: var(--light-blue-secondary);
+            }
+            
         </style>
     </head>
-    <body class="jose body">
-        <header class="header">
-            <h1 class="title" id="full-name"><a href="#"><span class="first-letter">J</span><span class="succeeding-letter">ose </span><span class="first-letter">R</span><span class="succeeding-letter">amon </span><span class="first-letter">S</span><span class="succeeding-letter">osa </span><span class="first-letter">T</span><span class="succeeding-letter">an</span></a></h1>
-        </header>
-        <main class="main flex-column">
-            <section class="greeting flex-column">
-                <p class="message godshinesans"><span class="expression">Öh,</span> <span class="greet ballega">Hi!</span><span class="emoji">😄</span></p>
-            </section>
-            <section class="introduction flex-column">
-                <p class="message godshinesans">It's me, <span class="name bantayog">JOSE</span> from</p>
-                <section class="philippines">
-                    <div class="flag flex">
-                        <img src="./assets/images/philippine-flag.png" alt="Flag of the Republic of the Philippines" class="philippine-flag"/>
-                        <div class="stripes flex-column">
-                            <div class="blue"></div>
-                            <div class="red"></div>
-                        </div>
-                    </div>
-                    <dl style="color: white;">
-                        <div>
-                            <dl>Philippines</dl>
-                            <dd>/Phil-lee-pins/</dd>
-                        </div>
-                        <div>
-                            <dl>Pilipinas</dl>
-                            <dd>/Pee-lee-pee-nas/</dd>
-                            <iframe width="320" height="200" src="https://www.youtube-nocookie.com/embed/-BqoAgVxCgg?si=c_kyhe28iq23v425&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </dl>
-                </section>
-            </section>
-        </main>
-        <footer class="footer">
-            <p class="reminder">For best browsing experiencing, feel free to <a class="link" href="https://browser-update.org/update-browser.html" target="_blank">update your browser.</a></p>
-        </footer>
+    <body class="body">
+        <div class="text-background">
+        </div>
     </body>
-    <!-- <script>
-        console.log(document.querySelector("body").clientHeight);
-    </script> -->
+    <script>
+
+        window.addEventListener("load", function(event) {
+            const backgroundText = ".jose .text-background";
+
+            const paragraphElement = document.createElement("p");
+            paragraphElement.classList.add("mabuhi");
+            paragraphElement.classList.add("animate");
+            document.querySelector(backgroundText).appendChild(paragraphElement);
+
+            let backgroundTextWidth = paragraphElement.scrollWidth;
+            while(backgroundTextWidth < window.screen.width) {
+                const textSpan = document.createElement("span");
+                textSpan.classList.add("text");
+
+                const mabuTextSpan = document.createElement("span");
+                mabuTextSpan.classList.add("barabara");
+                mabuTextSpan.classList.add("mabu");
+                mabuTextSpan.textContent="MABU";
+
+                const hiTextSpan = document.createElement("span");
+                hiTextSpan.classList.add("hi");
+                hiTextSpan.classList.add("ballega");
+                hiTextSpan.textContent="Hi!";
+
+                textSpan.appendChild(mabuTextSpan);
+                textSpan.appendChild(hiTextSpan);
+                paragraphElement.appendChild(textSpan);
+                
+                backgroundTextWidth = document.querySelector(backgroundText).scrollWidth;
+            }
+
+            // childrenNode = paragraphElement.children;
+            // for (let i = 0, len = Math.round(childrenNode.length/8); i < len; i++) {
+            //     paragraphElement.appendChild(childrenNode[i].cloneNode(true));
+            // }
+
+            let backgroundTextHeight = document.querySelector(backgroundText).scrollHeight;
+            while (backgroundTextHeight < window.innerHeight) {
+                document.querySelector(backgroundText).appendChild(document.querySelector(backgroundText + " .mabuhi:first-child").cloneNode(true)); 
+                backgroundTextHeight = document.querySelector(backgroundText).scrollHeight;
+            }
+
+            // const paragraphHeight = document.querySelector(backgroundText + " > .mabuhi:last-child").offsetHeight;
+            // while (backgroundTextHeight - window.innerHeight > paragraphHeight) {
+            //     document.querySelector(backgroundText + " > .mabuhi:last-child").remove();
+            //     backgroundTextHeight = document.querySelector(backgroundText).scrollHeight;
+            // }
+            
+        })
+
+        // window.addEventListener("resize", function(event) {
+        //     const backgroundText = ".jose .text-background";
+        //     const backgroundTextWidth = document.querySelector(backgroundText).getBoundingClientRect().width;
+
+        //     while(backgroundTextWidth < window.screen.width) {
+        //         const textSpan = document.createElement("span");
+        //         textSpan.classList.add("text");
+
+        //         const mabuTextSpan = document.createElement("span");
+        //         mabuTextSpan.classList.add("barabara");
+        //         mabuTextSpan.classList.add("mabu");
+        //         mabuTextSpan.textContent="MABU";
+
+        //         const hiTextSpan = document.createElement("span");
+        //         hiTextSpan.classList.add("hi");
+        //         hiTextSpan.classList.add("ballega");
+        //         hiTextSpan.textContent="Hi!";
+
+        //         textSpan.appendChild(mabuTextSpan);
+        //         textSpan.appendChild(hiTextSpan);
+        //         paragraphElement.appendChild(textSpan);
+
+        //         document.querySelector(backgroundText).appendChild(paragraphElement);
+        //         document.querySelector(backgroundText).appendChild(paragraphElement);
+        //     }
+
+        //     while(previousHeight < window.screen.height) {
+        //         const paragraphElement = document.createElement("p");
+        //         paragraphElement.classList.add("mabuhi");
+
+        //         document.querySelector(backgroundText).appendChild(paragraphElement);
+        //     }
+
+        //     previousHeight = window.screen.height;
+        // })
+    </script>
 </html>

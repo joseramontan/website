@@ -1,0 +1,46 @@
+/*
+    <nav class="nav">
+        <ul class="bantayog list right">
+            <li class="item"><a href="#Welcome" class="link current">Welcome</a></li>
+            <li class="item"><a href="#WhoIam" class="link">Who I am</a></li>
+            <li class="item"><a href="#WhatIam" class="link">What I am</a></li>
+            <li class="item"><a href="#Credit" class="link">Credits</a></li>
+        </ul>
+    </nav>
+*/
+
+.jose .nav > .list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+}
+
+.jose .nav > .list.right {
+    text-align: right;
+}
+
+.jose .nav > .list > .item {
+    box-sizing: border-box; 
+    list-style-type: none;
+    font-size: 13pt;
+}
+
+.jose .nav > .list > .item:not(:first-child) {
+    margin-top: 6px;
+}
+
+.jose .nav > .list > .item > .link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 11px 6px;
+}
+
+.jose.blue .nav > .list > .item > .link {
+    color: var(--blue-secondary);
+}
+
+.jose.blue .nav > .list > .item > .link.current {
+    background-color: var(--red);
+    color: var(--white);
+}

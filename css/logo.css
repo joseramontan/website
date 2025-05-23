@@ -1,0 +1,39 @@
+/*
+   <div class="logo">
+        <h1 class="text bantayog"><span class="first-letter">J</span><span class="succeeding-letters">ose</span> <span class="first-letter">R</span><span class="succeeding-letters">amon</span> <span class="first-letter">S</span><span class="succeeding-letters">osa</span> <span class="first-letter">T</span><span class="succeeding-letters">an</span></h1>
+    </div> 
+*/
+
+.jose .logo {
+    padding: 12px 16px 16px 12px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.jose .logo > .text {
+    line-height: 7pt;
+    font-weight: 100;
+    width: 41px;
+    margin: 0;
+}
+
+.jose .logo > .text > .first-letter {
+    font-size: 11pt;
+}
+
+.jose .logo > .text > .succeeding-letters {
+    font-size: 10pt;
+    letter-spacing: -0.5px;
+}
+
+.jose.blue .logo {
+    background-color: var(--dark-blue-secondary); 
+}
+
+.jose.blue .logo > .text > .first-letter {
+    color: var(--white);
+}
+
+.jose.blue .logo > .text > .succeeding-letters {
+    color: var(--blue-secondary);
+}

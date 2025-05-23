@@ -1,0 +1,19 @@
+/*
+    <header class="header flex">
+        <div class="logo">
+            <h1 class="text bantayog"><span class="first-letter">J</span><span class="succeeding-letters">ose</span> <span class="first-letter">R</span><span class="succeeding-letters">amon</span> <span class="first-letter">S</span><span class="succeeding-letters">osa</span> <span class="first-letter">T</span><span class="succeeding-letters">an</span></h1>
+        </div>
+        <nav class="nav">
+            <ul class="bantayog list right">
+                <li class="item"><a href="#Welcome" class="link current">Welcome</a></li>
+                <li class="item"><a href="#WhoIam" class="link">Who I am</a></li>
+                <li class="item"><a href="#WhatIam" class="link">What I am</a></li>
+                <li class="item"><a href="#Credit" class="link">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+*/
+
+.jose .header > .nav {
+    margin-left: auto;
+}
